@@ -55,10 +55,7 @@ function fraw(go,model) {
                 canvas.style.float = float;
                 canvas.style.top = t+"px";
                 canvas.style.left = l+"px";
-                if(position=="absolute") {         
-                  canvas.style.top = t+"px";
-                  canvas.style.left = l+"px";
-                } else {
+                if(position!=="absolute") {
                   canvas.style.marginTop = t+"px";
                   canvas.style.marginLeft = l+"px"; }
                 var body = document.getElementsByTagName("body")[0];
@@ -69,9 +66,7 @@ function fraw(go,model) {
                 loader.init();
             }
             var int = parseInt(result);
-            /////////////
-            
-            
+            /////////////       
             if(int <= 1) color = "rgba(229,0,2,.6)";
             else if(int >= 2 && int <= 4) color = "rgba(229,2,0,.6)";
             else if(int >= 4 && int < 6) color = "rgba(229,7,0,.6)";
@@ -164,7 +159,6 @@ document.addEventListener('click', function (evt) {
       document.getElementById("OpenMeterBox").style.display="none";
   }
 });
-
 
 function updateColor(input) {
     color = input;
@@ -322,4 +316,5 @@ function rotateNeedle(score) {
   }  
   feedback.innerHTML = "Your password scored "+score+"/100. " +text+"<br/><a href='https://www.openmeter.co.uk' style='clear: both; font-size: 11px; width: 100%; float: left; margin-top: 10px;margin-bottom:5px;'>The Open Meter</a>";
 }
-              
+var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+if(iOS) { document.body.style.cursor="pointer";}      
