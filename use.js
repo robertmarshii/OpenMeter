@@ -1,5 +1,5 @@
 loadScripts([
-  'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7',
+  'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.6',
   'https://use.openmeter.co.uk/openmeter.min.js'
 ], () => {
   //Change the position type/mode - default absolute/relative/inline, 1=true, 0=false
@@ -27,7 +27,7 @@ loadScripts([
   text12 = "Your password is pretty good.";
   text13 = "Your password is good.";
   text14 = "Your password is very good.";
-  text15 = "Your password very strong, well done.";
+  text15 = "Your password is very strong, well done.";
   text16 = "Your password is super strong, can you remember it?";
   //Custom model and character length
   modelJSON = modelJSON;
